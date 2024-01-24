@@ -1,0 +1,65 @@
+<div class="outer">
+	<div class="container">
+		<div class="row">
+			<div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+				<div class="logo"><img class="" src="assets/logo.png"></div>
+				<div class="panel border bg-white">
+					<div class="panel-heading">
+						<h3 class="p-3 font-weight-bold">Login</h3>
+					</div>
+					<div class="panel-body p-3">
+						<form [formGroup]="signUpForm">
+							<div class="form-group pt-3">
+								<div class="input-field"
+									[class.error]="signUpForm.controls['nome'].dirty && signUpForm.hasError('required', 'nome')">
+									<span class="fa fa-user p-2"></span>
+									<input formControlName="nome" type="text" placeholder="Nome">
+								</div>
+							</div>
+							<small
+								*ngIf="signUpForm.controls['nome'].dirty && signUpForm.hasError('required', 'nome')"
+								class="text-danger">*Nome não informado</small>
+							<div class="form-group pt-3">
+								<div class="input-field"
+									[class.error]="signUpForm.controls['sobrenome'].dirty && signUpForm.hasError('required', 'sobrenome')">
+									<span class="fa fa-user p-2"></span>
+									<input formControlName="sobrenome" type="text" placeholder="Sobrenome">
+								</div>
+							</div>
+							<small
+								*ngIf="signUpForm.controls['sobrenome'].dirty && signUpForm.hasError('required', 'sobrenome')"
+								class="text-danger">*Sobrenome não informado</small>
+							<div class="form-group pt-3">
+								<div class="input-field"
+									[class.error]="signUpForm.controls['email'].dirty && signUpForm.hasError('required', 'email')">
+									<span class="fa fa-at p-2"></span>
+									<input formControlName="email" type="text" placeholder="E-mail">
+								</div>
+							</div>
+							<small
+								*ngIf="signUpForm.controls['email'].dirty && signUpForm.hasError('required', 'email')"
+								class="text-danger">*Email não informado</small>
+							<div class="form-group pt-3">
+								<div class="input-field"
+									[class.error]="signUpForm.controls['senha'].dirty && signUpForm.hasError('required', 'senha')">
+									<span class="fa fa-lock p-2"></span>
+									<input formControlName="senha" [type]="type" placeholder="Senha" id="senha">
+									<span (click)="hideShowPass()" class="fa {{eyeIcon}}"></span>
+								</div>
+							</div>
+							<small
+								*ngIf="signUpForm.controls['senha'].dirty && signUpForm.hasError('required', 'senha')"
+								class="text-danger">*Senha não informada</small>
+							<button type="submit" class="btn btn-primary btn-block mt-4 w-100"
+								(click)="onSingup()">Cadastrar</button>
+							<div class="text-center pt-4 text-muted">Possui uma conta? <a id="forget"
+									routerLink="/login">Login</a>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

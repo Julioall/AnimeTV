@@ -1,0 +1,46 @@
+<div class="outer">
+	<div class="container">
+		<div class="row">
+			<div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+				<div class="logo"><img class="" src="assets/logo.png"></div>
+				<div class="panel border bg-white">
+					<div class="panel-heading">
+						<h3 class="p-3 font-weight-bold">Login</h3>
+					</div>
+					<div class="panel-body p-3">
+						<form [formGroup]="loginForm">
+							<div class="form-group pt-3">
+								<div class="input-field"
+									[class.error]="loginForm.controls['email'].dirty && loginForm.hasError('required', 'email')">
+									<span class="fa fa-user p-2"></span>
+									<input formControlName="email" type="text" placeholder="E-mail" id="email">
+								</div>
+							</div>
+							<small *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required', 'email')"
+								class="text-danger">*Email não informado</small>
+							<div class="form-group pt-3">
+								<div class="input-field"
+									[class.error]="loginForm.controls['senha'].dirty && loginForm.hasError('required', 'senha')">
+									<span class="fa fa-lock p-2"></span>
+									<input formControlName="senha" [type]="type" placeholder="Senha" id="senha">
+									<span (click)="hideShowPass()" class="fa {{eyeIcon}}"></span>
+								</div>
+							</div>
+							<small
+								*ngIf="loginForm.controls['senha'].dirty && loginForm.hasError('required', 'senha')"
+								class="text-danger">*Senha não informada. </small>
+							<div class="form-inline fr mt-4">
+								<a id="forget" class="font-weight-bold">Esqueceu a senha?</a>
+							</div>
+							<button (click)="onLogin()" type="submit"
+								class="btn btn-primary btn-block mt-4 w-100">Login</button>
+							<div class="text-center pt-4 text-muted">Não possui uma conta? <a id="forget"
+									routerLink="/signup">CRIE UMA</a></div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
