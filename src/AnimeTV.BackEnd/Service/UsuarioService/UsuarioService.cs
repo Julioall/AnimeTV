@@ -1,9 +1,11 @@
 ﻿using AnimeTV.BackEnd.DataContext;
+using AnimeTV.BackEnd.Helpers;
 using AnimeTV.BackEnd.Models;
 using AnimeTV.BackEnd.Models.Usuario;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 
 namespace AnimeTV.BackEnd.Service.UsuarioService
 {
@@ -27,7 +29,22 @@ namespace AnimeTV.BackEnd.Service.UsuarioService
                     return response;
 
                 }
-                Usuario usuario = _context.Usuarios.FirstOrDefault(x => x.Email == usuarioObj.Email && x.Senha == usuarioObj.Senha);
+                var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.Email == usuarioObj.Email);
+
+                if (!PasswordHasher.VerificarPassword(usuarioObj.Senha, usuario.Senha))
+                {
+                    response.Dados = null;
+                    response.Mensagem = "Senha incorreta!";
+                    response.Sucesso = false;
+                    return response;
+                }
+                else
+                {
+                    response.Dados = null;
+                    response.Mensagem = "Login Realizado!";
+                    response.Sucesso = true;
+                    return response;
+                }
                
                 response.Dados = usuario;
             }
@@ -51,8 +68,22 @@ namespace AnimeTV.BackEnd.Service.UsuarioService
                     return response;
 
                 }
+                if (await CheckEmailExistAsync(usuarioNovo.Email))
+                {
+                    response.Dados = null;
+                    response.Mensagem = "E-mail já cadastrado.";
+                    response.Sucesso = false;
+                    return response;
+                }
+                usuarioNovo.Senha = PasswordHasher.HashPassword(usuarioNovo.Senha);
+                usuarioNovo.Role = "User";
+                usuarioNovo.Token = "";
+
+
+
                 _context.Add(usuarioNovo);
                 await _context.SaveChangesAsync();
+                response.Mensagem = "Cadastro Realizado!";
                 response.Dados = _context.Usuarios.ToList();
             }
             catch (Exception ex)
@@ -156,6 +187,10 @@ namespace AnimeTV.BackEnd.Service.UsuarioService
                 response.Sucesso = false;
             }
             return response;
+        }
+        private Task<bool> CheckEmailExistAsync(string email)
+        {
+           return  _context.Usuarios.AnyAsync(x => x.Email == email); 
         }
     }
 }

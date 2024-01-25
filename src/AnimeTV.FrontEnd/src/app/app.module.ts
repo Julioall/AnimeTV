@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './componets/login/login.component';
 import { SignupComponent } from './componets/signup/signup.component';
+import { NgToastModule } from 'ng-angular-popup';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SignupComponent } from './componets/signup/signup.component';
     BrowserModule, HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

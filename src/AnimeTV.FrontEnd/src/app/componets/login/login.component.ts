@@ -3,6 +3,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import ValidateForm from '../../helpers/validateform';
 import { AuthService } from '../../services/auth.service';
 import { Route, Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
+
 
 @Component({
 	selector: 'app-login',
@@ -11,11 +13,15 @@ import { Route, Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-	type: string = "senha";
+	type: string = "password";
 	isText: boolean = false;
 	eyeIcon: string = "fa-eye-slash";
 	loginForm!: FormGroup;
-	constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) { }
+	constructor(
+		private fb: FormBuilder,
+		private auth: AuthService,
+		private router: Router,
+		private toast: NgToastService) { }
 	ngOnInit(): void {
 		this.loginForm = this.fb.group({
 			email: ['', Validators.required],
@@ -35,13 +41,15 @@ export class LoginComponent implements OnInit {
 			this.auth.login(this.loginForm.value)
 			.subscribe({
 				next:(res) =>{
-					alert(res.message);
 					this.loginForm.reset();
-					this.router.navigate(['home'])
-				},
-				error:(err) =>{
-					alert(err?.error.message)
-				}
+					if (res.success){
+						this.toast.success({detail:"SUCCESS",summary:res.mensagem, duration: 5000});
+						this.router.navigate(['home'])
+					}else{
+					}
+						this.toast.error({detail:"ERROR",summary:res.mensagem, duration: 5000});
+					}
+				
 			})
 		} else {
 			console.log("Formulario invalido")

@@ -10,8 +10,8 @@ namespace AnimeTV.BackEnd.Models.Usuario
         public string Sobrenome { get; init; }
         public string Email { get; set; }
         public string Senha { get; set; }
-        public string Token { get; init; }
-        public string Role { get; init; }
+        public string Token { get; set; }
+        public string Role { get; set; }
 
     }
 }
