@@ -23,37 +23,31 @@ namespace AnimeTV.BackEnd.Service.UsuarioService
             {
                 if (usuarioObj == null)
                 {
-                    response.Dados = null;
                     response.Mensagem = "Usuário não localizado!";
                     response.Sucesso = false;
                     return response;
-
                 }
                 var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.Email == usuarioObj.Email);
 
-                if (!PasswordHasher.VerificarPassword(usuarioObj.Senha, usuario.Senha))
+                if (usuarioObj.Senha == usuario.Senha)
                 {
-                    response.Dados = null;
                     response.Mensagem = "Senha incorreta!";
                     response.Sucesso = false;
                     return response;
                 }
-                else
-                {
-                    response.Dados = null;
-                    response.Mensagem = "Login Realizado!";
-                    response.Sucesso = true;
-                    return response;
-                }
-               
-                response.Dados = usuario;
+                
+                response.Mensagem = "Login Realizado!";
+                response.Sucesso = true;
+                return response;
             }
             catch (Exception ex)
             {
+                
                 response.Mensagem = ex.Message;
                 response.Sucesso = false;
+                return response;
             }
-            return response;
+            
         }
         public async Task<ServiceResponse<List<Usuario>>> CreateUsuario(Usuario usuarioNovo)
         {

@@ -38,19 +38,22 @@ export class LoginComponent implements OnInit {
 
 	onLogin() {
 		if (this.loginForm.valid) {
+			debugger
 			this.auth.login(this.loginForm.value)
-			.subscribe({
-				next:(res) =>{
-					this.loginForm.reset();
-					if (res.success){
-						this.toast.success({detail:"SUCCESS",summary:res.mensagem, duration: 5000});
-						this.router.navigate(['home'])
-					}else{
+				.subscribe({
+					next: (res) => {
+						debugger
+
+						if (res.sucesso) {
+							this.loginForm.reset();
+							this.toast.success({ detail: "SUCCESS", summary: res.mensagem, duration: 5000 });
+							this.router.navigate(['home'])
+						} else {
+							this.toast.error({ detail: "ERROR", summary: res.mensagem, duration: 5000 });
+						}
 					}
-						this.toast.error({detail:"ERROR",summary:res.mensagem, duration: 5000});
-					}
-				
-			})
+
+				})
 		} else {
 			console.log("Formulario invalido")
 			ValidateForm.validateAllFormFileds(this.loginForm);
