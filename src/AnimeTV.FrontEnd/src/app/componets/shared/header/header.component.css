@@ -1,0 +1,27 @@
+.header-container{
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-container{
+    width: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-right: 45px;
+}
+.logo{
+    width: 10%;
+}
+
+a {
+    color: #0097b2;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0097b2;
+}

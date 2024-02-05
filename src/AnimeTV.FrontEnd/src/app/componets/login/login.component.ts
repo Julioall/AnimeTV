@@ -38,11 +38,9 @@ export class LoginComponent implements OnInit {
 
 	onLogin() {
 		if (this.loginForm.valid) {
-			debugger
 			this.auth.login(this.loginForm.value)
 				.subscribe({
 					next: (res) => {
-						debugger
 
 						if (res.sucesso) {
 							this.loginForm.reset();

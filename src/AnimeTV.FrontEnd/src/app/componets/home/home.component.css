@@ -1,0 +1,55 @@
+.container-main {
+    background-color: black;
+}
+
+.carousel-caption {
+    max-width: 25rem;
+    position: absolute;
+    top: 5rem;
+    left: 3rem;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-caption img {
+    width: 50%;
+    position: relative;
+    left: 5rem;
+}
+
+.carousel-indicators {
+    margin: 0px;
+
+    position: absolute;
+    top: 30rem;
+    right: 150vh;
+}
+
+.card-container {
+    display: flex;
+
+}
+
+.container-fluid {
+    position: relative;
+    top: -20rem;
+}
+
+.container-fluid h2 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.card {
+    width: 25rem;
+    margin: 15px;
+    -webkit-box-shadow: 2px 36px 36px 55px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 36px 36px 55px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 36px 36px 55px rgba(0, 0, 0, 0.75);
+}
+
+.card:hover .card-body {
+    display: inline-block;
+}

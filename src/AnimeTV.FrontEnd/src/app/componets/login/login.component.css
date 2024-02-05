@@ -1,13 +1,12 @@
 .outer {
     height: 100vh;
-    background-color: #dbdbdb;
+    background-color: #212529;
     ;
 }
 
 .panel-heading {
     text-align: center;
     margin-bottom: 10px;
-
 }
 
 #forget {
@@ -15,15 +14,16 @@
     margin-left: auto;
     text-decoration: none;
     cursor: pointer;
+   
 }
 
 a {
-    color: #000000;
+    color: #0097b2;
 }
 
 a:hover {
     text-decoration: none;
-    color: #0097b2;
+    color: #62f3f8;
 }
 
 .form-inline label {
@@ -39,6 +39,7 @@ a:hover {
 }
 
 .panel {
+    
     min-height: 380px;
     border-radius: 12px;
     margin-top: 10px;
@@ -50,7 +51,7 @@ a:hover {
 }
 
 .btn:hover {
-    background-color: #5ce1e6;
+    background-color: #62f3f8;
 }
 
 .input-field {
@@ -59,8 +60,8 @@ a:hover {
     display: flex;
     align-items: center;
     cursor: pointer;
-    border: 1px solid #000000;
-    color: #000000bf;
+    color: #000000;
+    background-color: #343a40;
 }
 
 input[type='text'],
@@ -69,6 +70,7 @@ input[type='password'] {
     outline: none;
     box-shadow: none;
     width: 100%;
+    background-color: #343a40;
 }
 
 .fa-eye-slash.bt {
@@ -84,5 +86,5 @@ input[type='password'] {
 }
 
 .logo img {
-    width: 10vh;
+    width: 8vh;
 }
