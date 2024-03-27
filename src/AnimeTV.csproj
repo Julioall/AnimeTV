@@ -1,0 +1,159 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\.gitignore" />
+    <Content Remove="wwwroot\angular.json" />
+    <Content Remove="wwwroot\aspnetcore-https.js" />
+    <Content Remove="wwwroot\karma.conf.js" />
+    <Content Remove="wwwroot\package-lock.json" />
+    <Content Remove="wwwroot\package.json" />
+    <Content Remove="wwwroot\README.md" />
+    <Content Remove="wwwroot\src\app\app-routing.module.ts" />
+    <Content Remove="wwwroot\src\app\app.component.css" />
+    <Content Remove="wwwroot\src\app\app.component.html" />
+    <Content Remove="wwwroot\src\app\app.component.spec.ts" />
+    <Content Remove="wwwroot\src\app\app.component.ts" />
+    <Content Remove="wwwroot\src\app\app.module.ts" />
+    <Content Remove="wwwroot\src\app\componets\home\home.component.css" />
+    <Content Remove="wwwroot\src\app\componets\home\home.component.html" />
+    <Content Remove="wwwroot\src\app\componets\home\home.component.spec.ts" />
+    <Content Remove="wwwroot\src\app\componets\home\home.component.ts" />
+    <Content Remove="wwwroot\src\app\componets\login\login.component.css" />
+    <Content Remove="wwwroot\src\app\componets\login\login.component.html" />
+    <Content Remove="wwwroot\src\app\componets\login\login.component.spec.ts" />
+    <Content Remove="wwwroot\src\app\componets\login\login.component.ts" />
+    <Content Remove="wwwroot\src\app\componets\shared\header\header.component.css" />
+    <Content Remove="wwwroot\src\app\componets\shared\header\header.component.html" />
+    <Content Remove="wwwroot\src\app\componets\shared\header\header.component.spec.ts" />
+    <Content Remove="wwwroot\src\app\componets\shared\header\header.component.ts" />
+    <Content Remove="wwwroot\src\app\componets\signup\signup.component.css" />
+    <Content Remove="wwwroot\src\app\componets\signup\signup.component.html" />
+    <Content Remove="wwwroot\src\app\componets\signup\signup.component.spec.ts" />
+    <Content Remove="wwwroot\src\app\componets\signup\signup.component.ts" />
+    <Content Remove="wwwroot\src\app\helpers\validateform.ts" />
+    <Content Remove="wwwroot\src\app\services\auth.service.spec.ts" />
+    <Content Remove="wwwroot\src\app\services\auth.service.ts" />
+    <Content Remove="wwwroot\src\assets\.gitkeep" />
+    <Content Remove="wwwroot\src\assets\item (10).jpe" />
+    <Content Remove="wwwroot\src\assets\item (11).jpe" />
+    <Content Remove="wwwroot\src\assets\item (12).jpe" />
+    <Content Remove="wwwroot\src\assets\item (13).jpe" />
+    <Content Remove="wwwroot\src\assets\item (14).jpe" />
+    <Content Remove="wwwroot\src\assets\item (15).jpe" />
+    <Content Remove="wwwroot\src\assets\item (2).jpe" />
+    <Content Remove="wwwroot\src\assets\item (3).jpe" />
+    <Content Remove="wwwroot\src\assets\item (4).jpe" />
+    <Content Remove="wwwroot\src\assets\item (5).jpe" />
+    <Content Remove="wwwroot\src\assets\item (6).jpe" />
+    <Content Remove="wwwroot\src\assets\item (7).jpe" />
+    <Content Remove="wwwroot\src\assets\item (8).jpe" />
+    <Content Remove="wwwroot\src\assets\item (9).jpe" />
+    <Content Remove="wwwroot\src\assets\logo.png" />
+    <Content Remove="wwwroot\src\assets\perfil.jpeg" />
+    <Content Remove="wwwroot\src\assets\slide1-logo.webp" />
+    <Content Remove="wwwroot\src\assets\slide1.webp" />
+    <Content Remove="wwwroot\src\assets\slide2-logo.webp" />
+    <Content Remove="wwwroot\src\assets\slide2.webp" />
+    <Content Remove="wwwroot\src\assets\slide3-logo.webp" />
+    <Content Remove="wwwroot\src\assets\slide3.webp" />
+    <Content Remove="wwwroot\src\favicon.ico" />
+    <Content Remove="wwwroot\src\index.html" />
+    <Content Remove="wwwroot\src\main.ts" />
+    <Content Remove="wwwroot\src\proxy.conf.js" />
+    <Content Remove="wwwroot\src\styles.css" />
+    <Content Remove="wwwroot\tsconfig.app.json" />
+    <Content Remove="wwwroot\tsconfig.spec.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Identity" Version="1.10.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.13" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="RavenDB.Client" Version="6.0.101" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\.gitignore" />
+    <None Include="wwwroot\angular.json" />
+    <None Include="wwwroot\aspnetcore-https.js" />
+    <None Include="wwwroot\karma.conf.js" />
+    <None Include="wwwroot\package-lock.json" />
+    <None Include="wwwroot\package.json" />
+    <None Include="wwwroot\README.md" />
+    <None Include="wwwroot\src\app\app-routing.module.ts" />
+    <None Include="wwwroot\src\app\app.component.css" />
+    <None Include="wwwroot\src\app\app.component.html" />
+    <None Include="wwwroot\src\app\app.component.spec.ts" />
+    <None Include="wwwroot\src\app\app.component.ts" />
+    <None Include="wwwroot\src\app\app.module.ts" />
+    <None Include="wwwroot\src\app\componets\home\home.component.css" />
+    <None Include="wwwroot\src\app\componets\home\home.component.html" />
+    <None Include="wwwroot\src\app\componets\home\home.component.spec.ts" />
+    <None Include="wwwroot\src\app\componets\home\home.component.ts" />
+    <None Include="wwwroot\src\app\componets\login\login.component.css" />
+    <None Include="wwwroot\src\app\componets\login\login.component.html" />
+    <None Include="wwwroot\src\app\componets\login\login.component.spec.ts" />
+    <None Include="wwwroot\src\app\componets\login\login.component.ts" />
+    <None Include="wwwroot\src\app\componets\shared\header\header.component.css" />
+    <None Include="wwwroot\src\app\componets\shared\header\header.component.html" />
+    <None Include="wwwroot\src\app\componets\shared\header\header.component.spec.ts" />
+    <None Include="wwwroot\src\app\componets\shared\header\header.component.ts" />
+    <None Include="wwwroot\src\app\componets\signup\signup.component.css" />
+    <None Include="wwwroot\src\app\componets\signup\signup.component.html" />
+    <None Include="wwwroot\src\app\componets\signup\signup.component.spec.ts" />
+    <None Include="wwwroot\src\app\componets\signup\signup.component.ts" />
+    <None Include="wwwroot\src\app\helpers\validateform.ts" />
+    <None Include="wwwroot\src\app\services\auth.service.spec.ts" />
+    <None Include="wwwroot\src\app\services\auth.service.ts" />
+    <None Include="wwwroot\src\assets\.gitkeep" />
+    <None Include="wwwroot\src\assets\item (10).jpe" />
+    <None Include="wwwroot\src\assets\item (11).jpe" />
+    <None Include="wwwroot\src\assets\item (12).jpe" />
+    <None Include="wwwroot\src\assets\item (13).jpe" />
+    <None Include="wwwroot\src\assets\item (14).jpe" />
+    <None Include="wwwroot\src\assets\item (15).jpe" />
+    <None Include="wwwroot\src\assets\item (2).jpe" />
+    <None Include="wwwroot\src\assets\item (3).jpe" />
+    <None Include="wwwroot\src\assets\item (4).jpe" />
+    <None Include="wwwroot\src\assets\item (5).jpe" />
+    <None Include="wwwroot\src\assets\item (6).jpe" />
+    <None Include="wwwroot\src\assets\item (7).jpe" />
+    <None Include="wwwroot\src\assets\item (8).jpe" />
+    <None Include="wwwroot\src\assets\item (9).jpe" />
+    <None Include="wwwroot\src\assets\logo.png" />
+    <None Include="wwwroot\src\assets\perfil.jpeg" />
+    <None Include="wwwroot\src\assets\slide1-logo.webp" />
+    <None Include="wwwroot\src\assets\slide1.webp" />
+    <None Include="wwwroot\src\assets\slide2-logo.webp" />
+    <None Include="wwwroot\src\assets\slide2.webp" />
+    <None Include="wwwroot\src\assets\slide3-logo.webp" />
+    <None Include="wwwroot\src\assets\slide3.webp" />
+    <None Include="wwwroot\src\favicon.ico" />
+    <None Include="wwwroot\src\index.html" />
+    <None Include="wwwroot\src\main.ts" />
+    <None Include="wwwroot\src\proxy.conf.js" />
+    <None Include="wwwroot\src\styles.css" />
+    <None Include="wwwroot\tsconfig.app.json" />
+    <None Include="wwwroot\tsconfig.spec.json" />
+  </ItemGroup>
+
+</Project>
