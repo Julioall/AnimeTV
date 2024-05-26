@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "AnimeTV.Client", "animetv.client\AnimeTV.Client.esproj", "{AD0FC892-B556-4782-9C32-12511EF3F93C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimeTV.Web", "AnimeTV.Web\AnimeTV.Web.csproj", "{AA540581-A063-41F0-9681-7738A14DAB36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimeTV.Infrastructure", "AnimeTV.Infrastructure\AnimeTV.Infrastructure.csproj", "{3B8C208C-E2CC-4D63-B646-B34541B29541}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimeTV.Service", "AnimeTV.Service\AnimeTV.Service.csproj", "{6F7500F0-9C38-471D-B3C3-174A169D8D47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimeTV.Domain", "AnimeTV.Domain\AnimeTV.Domain.csproj", "{F6DB6F9E-62E4-4FAD-BD3B-6AFEA0E404FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimeTV.Test", "AnimeTV.Test\AnimeTV.Test.csproj", "{C0CC0FD6-D3C8-4BE6-AE04-516C9906F694}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD0FC892-B556-4782-9C32-12511EF3F93C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD0FC892-B556-4782-9C32-12511EF3F93C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD0FC892-B556-4782-9C32-12511EF3F93C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AD0FC892-B556-4782-9C32-12511EF3F93C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD0FC892-B556-4782-9C32-12511EF3F93C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD0FC892-B556-4782-9C32-12511EF3F93C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AA540581-A063-41F0-9681-7738A14DAB36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA540581-A063-41F0-9681-7738A14DAB36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA540581-A063-41F0-9681-7738A14DAB36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA540581-A063-41F0-9681-7738A14DAB36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B8C208C-E2CC-4D63-B646-B34541B29541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B8C208C-E2CC-4D63-B646-B34541B29541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B8C208C-E2CC-4D63-B646-B34541B29541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B8C208C-E2CC-4D63-B646-B34541B29541}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F7500F0-9C38-471D-B3C3-174A169D8D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F7500F0-9C38-471D-B3C3-174A169D8D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F7500F0-9C38-471D-B3C3-174A169D8D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F7500F0-9C38-471D-B3C3-174A169D8D47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6DB6F9E-62E4-4FAD-BD3B-6AFEA0E404FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6DB6F9E-62E4-4FAD-BD3B-6AFEA0E404FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6DB6F9E-62E4-4FAD-BD3B-6AFEA0E404FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6DB6F9E-62E4-4FAD-BD3B-6AFEA0E404FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0CC0FD6-D3C8-4BE6-AE04-516C9906F694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0CC0FD6-D3C8-4BE6-AE04-516C9906F694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0CC0FD6-D3C8-4BE6-AE04-516C9906F694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0CC0FD6-D3C8-4BE6-AE04-516C9906F694}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11F2E8DD-B076-46B3-8F82-7B2095587E38}
+	EndGlobalSection
+EndGlobal
